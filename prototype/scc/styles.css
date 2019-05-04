@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: black;
+  font-family: Roboto,  sans-serif;
+  color: #b4b4b4; }
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100vh; }
+  .app .menu {
+    background: black;
+    width: 3rem; }
+  .app .content {
+    background: black;
+    width: calc(100% - 3rem);
+    padding: 10px; }
+    .app .content .page-title {
+      color: #c8c8c8;
+      font-weight: normal;
+      font-size: 1.5rem; }
+
+.section-one {
+  margin-top: 5px;
+  margin-bottom: 10px; }
+  .section-one .section-one-wrapper {
+    position: relative;
+    border: transparent 1px solid; }
+    .section-one .section-one-wrapper .section-one-title {
+      background: #801300;
+      font-size: .8rem;
+      color: #e6e6e6;
+      height: 24px;
+      width: 200px;
+      border: 1px solid #881400;
+      border-radius: 2px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      z-index: 1; }
+    .section-one .section-one-wrapper .section-one-content {
+      position: relative;
+      background: #141414;
+      border: solid 1px #1a1a1a;
+      border-radius: 2px 2px 2px 2px;
+      margin-top: 12px;
+      font-size: .8rem;
+      padding: 30px 20px 20px 20px; }
+    .section-one .section-one-wrapper .section-one-footer {
+      position: relative;
+      bottom: 2px;
+      left: 0;
+      padding: 10px 20px;
+      background: #1a1a1a;
+      border-radius: 0 0 2px 2px; }
+
+.task {
+  margin: 1px 0 3px 0;
+  padding: 10px 20px;
+  background: #141414;
+  border: solid 1px #1a1a1a;
+  border-radius: 2px 2px 2px 2px;
+  color: #b4b4b4;
+  position: relative; }
+  .task .task-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background: rgba(172, 255, 47, 0.7); }
+  .task .task-root {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .task .task-root .task-title {
+      font-size: .9rem; }
+    .task .task-root .task-statistics {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      font-size: .75rem; }
+      .task .task-root .task-statistics .iterations, .task .task-root .task-statistics .total-time {
+        margin: 5px 20px 0 0;
+        color: #828282; }
+      .task .task-root .task-statistics .iterations-value, .task .task-root .task-statistics .total-time-value {
+        margin-left: 5px;
+        color: #b4b4b4; }
+  .task .task-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 120px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-left: solid 1px #1a1a1a;
+    background: #202020;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+/*# sourceMappingURL=styles.css.map */

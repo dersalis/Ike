@@ -1,0 +1,70 @@
+$text-color-primary: rgb(180, 180, 180);
+$text-color-secondary: rgb(130, 130, 130);
+
+$task-background: rgb(20, 20, 20);
+$task-border: solid 1px rgb(26, 26, 26);
+$actions-background: rgb(32, 32, 32);
+
+.task {
+    margin: 1px 0 3px 0;
+    padding: 10px 20px;
+    background: $task-background;
+    border: $task-border;
+    border-radius: 2px 2px 2px 2px;
+    color: $text-color-primary;
+
+    position: relative;
+
+    .task-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        background: rgba(172, 255, 47, 0.7);
+    }
+
+    .task-root {
+        display: flex;
+        flex-direction: column;
+
+        .task-title {
+            font-size: .9rem;
+        }
+    
+        .task-statistics {
+            display: flex;
+            flex-direction: row;
+            font-size: .75rem;
+    
+            .iterations, .total-time {
+                margin: 5px 20px 0 0;
+                color: $text-color-secondary;
+            }
+    
+            .iterations-value, .total-time-value {
+                margin-left: 5px;
+                color: $text-color-primary;
+            }
+        }
+    }
+
+    .task-actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 120px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        border-left: $task-border;
+        background: $actions-background;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
