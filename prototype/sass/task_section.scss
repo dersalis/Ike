@@ -1,0 +1,179 @@
+// czcionki
+$title-height: 20px;
+$margin-side: 20px;
+
+// Important and Urgent - kolory
+$non_background_color_selected: rgb(115, 115, 115);
+$non_background_color_active: rgb(80, 80, 80);
+$non_background_color_disabled: rgb(70, 70, 70);
+
+$non_border_color_selected: rgb(120, 120, 120);
+$non_border_color_active: rgb(85, 85, 85);
+$non_border_color_disabled: rgb(75, 75, 75);
+
+.task_section {
+  //   margin-top: 5px;
+  //   margin-bottom: 10px;
+
+  .task_section_wrapper {
+    position: relative;
+    border: transparent 1px solid;
+
+    .task_section_title {
+      background: $non_background_color_active;
+      font-size: 0.8rem;
+      // text-transform: uppercase;
+      color: $title_color_active;
+      height: $title-height;
+      // width: $title-width;
+      border: 1px solid $non_border_color_active;
+      border-radius: 2px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: 0;
+      left: $margin-side;
+      right: $margin-side;
+      z-index: 1;
+
+      & > span {
+          position: relative;
+      }
+
+      & > span > b {
+        position: absolute;
+        bottom: 3px;
+        right: -24px;
+        width: 20px;
+        font-size: 0.65rem;
+        // margin-bottom: .1rem;
+      }
+
+      &:hover {
+        color: $title_color_selected;
+        background: $non_background_color_selected;
+        border: 1px solid $non_border_color_selected;
+      }
+
+      transition: color 1s, background 1s, border 1s;
+    }
+
+    .task_section_content {
+      position: relative;
+      background: rgb(20, 20, 20);
+      border: solid 1px rgb(26, 26, 26);
+      border-radius: 2px 2px 2px 2px;
+      margin-top: 12px;
+
+      // color: $text-color-primary;
+      font-size: 0.8rem;
+      padding: 30px 20px 20px 20px;
+    }
+
+    .task_section_footer {
+      position: relative;
+      bottom: 2px;
+      left: 0;
+
+      padding: 10px 20px;
+      // height: 40px;
+      background: rgb(26, 26, 26);
+      border-radius: 0 0 2px 2px;
+    }
+  }
+
+  &.iau {
+    // Important and Urgent - kolory
+    $iau_background_color_selected: rgb(175, 25, 0);
+    $iau_background_color_active: rgb(125, 20, 0);
+    $iau_background_color_disabled: rgb(100, 15, 0);
+
+    $iau_border_color_selected: rgb(185, 25, 1);
+    $iau_border_color_active: rgb(135, 20, 0);
+    $iau_border_color_disabled: rgb(110, 15, 0);
+
+    .task_section_wrapper {
+      .task_section_title {
+        background: $iau_background_color_active;
+        border: 1px solid $iau_border_color_active;
+
+        &:hover {
+          background: $iau_background_color_selected;
+          border: 1px solid $iau_border_color_selected;
+        }
+      }
+    }
+  }
+
+  &.ianu {
+    // Important and Not Urgent - kolory
+    $ianu_background_color_selected: rgb(200, 154, 0);
+    $ianu_background_color_active: rgb(160, 122, 0);
+    $ianu_background_color_disabled: rgb(135, 104, 0);
+
+    $ianu_border_color_selected: rgb(190, 154, 0);
+    $ianu_border_color_active: rgb(150, 122, 0);
+    $ianu_border_color_disabled: rgb(125, 104, 0);
+
+    .task_section_wrapper {
+      .task_section_title {
+        background: $ianu_background_color_active;
+        border: 1px solid $ianu_border_color_active;
+
+        &:hover {
+          background: $ianu_background_color_selected;
+          border: 1px solid $ianu_border_color_selected;
+        }
+      }
+    }
+  }
+
+  &.uani {
+    // Urgent and Not Importent - kolory
+    $uani_background_color_selected: rgb(46, 155, 0);
+    $uani_background_color_active: rgb(35, 125, 0);
+    $uani_background_color_disabled: rgb(31, 110, 0);
+
+    $uani_border_color_selected: rgb(49, 163, 0);
+    $uani_border_color_active: rgb(38, 134, 0);
+    $uani_border_color_disabled: rgb(33, 117, 0);
+
+    .task_section_wrapper {
+      .task_section_title {
+        background: $uani_background_color_active;
+        border: 1px solid $uani_border_color_active;
+
+        &:hover {
+          background: $uani_background_color_selected;
+          border: 1px solid $uani_border_color_selected;
+        }
+      }
+    }
+  }
+
+  &.nuani {
+    // Not Urgent and Not Importent - kolory
+    $nuani_background_color_selected: rgb(0, 114, 160);
+    $nuani_background_color_active: rgb(0, 90, 125);
+    $nuani_background_color_disabled: rgb(0, 80, 112);
+
+    $nuani_border_color_selected: rgb(0, 121, 168);
+    $nuani_border_color_active: rgb(0, 96, 134);
+    $nuani_border_color_disabled: rgb(0, 88, 122);
+
+    .task_section_wrapper {
+      .task_section_title {
+        background: $nuani_background_color_active;
+        border: 1px solid $nuani_border_color_active;
+
+        &:hover {
+          background: $nuani_background_color_selected;
+          border: 1px solid $nuani_border_color_selected;
+        }
+      }
+    }
+  }
+}
