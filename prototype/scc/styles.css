@@ -96,8 +96,7 @@ body {
       background: #801300;
       font-size: .8rem;
       color: #e6e6e6;
-      height: 24px;
-      width: 200px;
+      height: 20px;
       border: 1px solid #881400;
       border-radius: 2px;
       display: -webkit-box;
@@ -112,6 +111,7 @@ body {
       position: absolute;
       top: 0;
       left: 20px;
+      right: 20px;
       z-index: 1; }
     .section-one .section-one-wrapper .section-one-content {
       position: relative;

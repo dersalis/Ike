@@ -1,4 +1,4 @@
-$title-height: 24px;
+$title-height: 20px;
 $title-width: 200px;
 
 .section-one {
@@ -15,7 +15,7 @@ $title-width: 200px;
             // text-transform: uppercase;
             color: $text-color-secondary;
             height: $title-height;
-            width: $title-width;
+            // width: $title-width;
             border: 1px solid rgb(136, 20, 0);
             border-radius: 2px;
             
@@ -26,6 +26,7 @@ $title-width: 200px;
             position: absolute;
             top: 0;
             left: 20px;
+            right: 20px;
             z-index: 1;
         }
 
