@@ -1,70 +1,49 @@
-$text-color-primary: rgb(180, 180, 180);
-$text-color-secondary: rgb(130, 130, 130);
-
 $task-background: rgb(20, 20, 20);
 $task-border: solid 1px rgb(26, 26, 26);
 $actions-background: rgb(32, 32, 32);
+$task-color-primary: rgb(180, 180, 180);
+$task-color-secondary: rgb(121, 121, 121);
 
 .task {
-    // margin: 1px 0 3px 0;
-    // padding: 10px 20px;
-    // background: $task-background;
-    // border: $task-border;
-    // border-radius: 2px 2px 2px 2px;
-    // color: $text-color-primary;
+  margin: 0 0 -1px 0;
+  padding: 5px 20px;
+  background: $task-background;
+  border-top: $task-border;
+  border-bottom: $task-border;
+  border-radius: none;
+  color: $task-color-primary;
 
-    // position: relative;
+  position: relative;
 
-    .task-color {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 5px;
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-        background: rgba(172, 255, 47, 0.7);
+  .task_root {
+    display: flex;
+    flex-direction: column;
+
+    .task_title {
+      font-size: 0.8rem;
     }
 
-    .task-root {
-        // display: flex;
-        // flex-direction: column;
+    .task_descriptions {
+      display: flex;
+      flex-direction: row;
+      font-size: 0.7rem;
+      color: $task-color-secondary;
+        margin-top: .3rem;
+      
+        .task_date {
+            .ring {
+                font-size: 0.75rem;
+                padding: 0px;
+                margin: -2px 3px 0px 0px;
+            }
+            .date {
 
-        .task-title {
-            // font-size: .9rem;
-        }
-    
-        // .task-statistics {
-        //     display: flex;
-        //     flex-direction: row;
-        //     font-size: .75rem;
-    
-        //     .iterations, .total-time {
-        //         margin: 5px 20px 0 0;
-        //         color: $text-color-secondary;
-        //     }
-    
-        //     .iterations-value, .total-time-value {
-        //         margin-left: 5px;
-        //         color: $text-color-primary;
-        //     }
+            }
+            .separator {
+                margin: 1px 10px 2px 10px;
+                color: rgb(70, 70, 70);
+            }
         }
     }
-
-    .task-actions {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 120px;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-        border-left: $task-border;
-        background: $actions-background;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
+  }
 }
