@@ -11,6 +11,8 @@ $non_border_color_selected: rgb(120, 120, 120);
 $non_border_color_active: rgb(85, 85, 85);
 $non_border_color_disabled: rgb(75, 75, 75);
 
+$shadow_section_content: 0px -5px 11px 2px rgba(0, 0, 0, 0.75);
+
 .task_section {
   //   margin-top: 5px;
   //   margin-bottom: 10px;
@@ -39,8 +41,10 @@ $non_border_color_disabled: rgb(75, 75, 75);
       right: $margin-side;
       z-index: 1;
 
+      box-shadow: $shadow_section_content;
+
       & > span {
-          position: relative;
+        position: relative;
       }
 
       & > span > b {
@@ -70,7 +74,9 @@ $non_border_color_disabled: rgb(75, 75, 75);
 
       // color: $text-color-primary;
       font-size: 0.8rem;
-      padding: 30px 20px 20px 20px;
+      padding: 15px 0px 2px 0px;
+
+      box-shadow: $shadow_section_content;
     }
 
     .task_section_footer {
@@ -96,6 +102,8 @@ $non_border_color_disabled: rgb(75, 75, 75);
     $iau_border_color_disabled: rgb(110, 15, 0);
 
     .task_section_wrapper {
+      margin-bottom: -15px;
+
       .task_section_title {
         background: $iau_background_color_active;
         border: 1px solid $iau_border_color_active;
@@ -104,6 +112,11 @@ $non_border_color_disabled: rgb(75, 75, 75);
           background: $iau_background_color_selected;
           border: 1px solid $iau_border_color_selected;
         }
+      }
+
+      .task_section_content {
+        border-bottom: none;
+        border-radius: 2px 2px 0px 0px;
       }
     }
   }
@@ -119,14 +132,23 @@ $non_border_color_disabled: rgb(75, 75, 75);
     $ianu_border_color_disabled: rgb(125, 104, 0);
 
     .task_section_wrapper {
+      margin-bottom: -15px;
+
       .task_section_title {
         background: $ianu_background_color_active;
         border: 1px solid $ianu_border_color_active;
+        box-shadow: $shadow_section_content;
 
         &:hover {
           background: $ianu_background_color_selected;
           border: 1px solid $ianu_border_color_selected;
         }
+      }
+
+      .task_section_content {
+        border-bottom: none;
+        border-radius: 2px 2px 0px 0px;
+        box-shadow: $shadow_section_content;
       }
     }
   }
@@ -142,6 +164,8 @@ $non_border_color_disabled: rgb(75, 75, 75);
     $uani_border_color_disabled: rgb(33, 117, 0);
 
     .task_section_wrapper {
+      margin-bottom: -15px;
+
       .task_section_title {
         background: $uani_background_color_active;
         border: 1px solid $uani_border_color_active;
@@ -150,6 +174,11 @@ $non_border_color_disabled: rgb(75, 75, 75);
           background: $uani_background_color_selected;
           border: 1px solid $uani_border_color_selected;
         }
+      }
+
+      .task_section_content {
+        // border-bottom: none;
+        // border-radius: 2px 2px 0px 0px;
       }
     }
   }
@@ -165,6 +194,8 @@ $non_border_color_disabled: rgb(75, 75, 75);
     $nuani_border_color_disabled: rgb(0, 88, 122);
 
     .task_section_wrapper {
+      // margin-bottom: -15px;
+
       .task_section_title {
         background: $nuani_background_color_active;
         border: 1px solid $nuani_border_color_active;
@@ -174,6 +205,56 @@ $non_border_color_disabled: rgb(75, 75, 75);
           border: 1px solid $nuani_border_color_selected;
         }
       }
+    }
+  }
+}
+
+$task-background: rgb(20, 20, 20);
+$task-border: solid 1px rgb(26, 26, 26);
+$actions-background: rgb(32, 32, 32);
+$task-color-primary: rgb(180, 180, 180);
+$task-color-secondary: rgb(121, 121, 121);
+
+.task {
+  margin: 0 0 -1px 0;
+  padding: 5px 20px;
+  background: $task-background;
+  border-top: $task-border;
+  border-bottom: $task-border;
+  border-radius: none;
+  color: $task-color-primary;
+
+  position: relative;
+
+  .task_root {
+    display: flex;
+    flex-direction: column;
+
+    .task_title {
+      font-size: 0.8rem;
+    }
+
+    .task_descriptions {
+      display: flex;
+      flex-direction: row;
+      font-size: 0.7rem;
+      color: $task-color-secondary;
+        margin-top: .3rem;
+      
+        .task_date {
+            .ring {
+                font-size: 0.75rem;
+                padding: 0px;
+                margin: -2px 3px 0px 0px;
+            }
+            .date {
+
+            }
+            .separator {
+                margin: 1px 10px 2px 10px;
+                color: rgb(70, 70, 70);
+            }
+        }
     }
   }
 }

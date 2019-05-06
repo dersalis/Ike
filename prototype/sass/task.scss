@@ -6,14 +6,14 @@ $task-border: solid 1px rgb(26, 26, 26);
 $actions-background: rgb(32, 32, 32);
 
 .task {
-    margin: 1px 0 3px 0;
-    padding: 10px 20px;
-    background: $task-background;
-    border: $task-border;
-    border-radius: 2px 2px 2px 2px;
-    color: $text-color-primary;
+    // margin: 1px 0 3px 0;
+    // padding: 10px 20px;
+    // background: $task-background;
+    // border: $task-border;
+    // border-radius: 2px 2px 2px 2px;
+    // color: $text-color-primary;
 
-    position: relative;
+    // position: relative;
 
     .task-color {
         position: absolute;
@@ -27,27 +27,27 @@ $actions-background: rgb(32, 32, 32);
     }
 
     .task-root {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
 
         .task-title {
-            font-size: .9rem;
+            // font-size: .9rem;
         }
     
-        .task-statistics {
-            display: flex;
-            flex-direction: row;
-            font-size: .75rem;
+        // .task-statistics {
+        //     display: flex;
+        //     flex-direction: row;
+        //     font-size: .75rem;
     
-            .iterations, .total-time {
-                margin: 5px 20px 0 0;
-                color: $text-color-secondary;
-            }
+        //     .iterations, .total-time {
+        //         margin: 5px 20px 0 0;
+        //         color: $text-color-secondary;
+        //     }
     
-            .iterations-value, .total-time-value {
-                margin-left: 5px;
-                color: $text-color-primary;
-            }
+        //     .iterations-value, .total-time-value {
+        //         margin-left: 5px;
+        //         color: $text-color-primary;
+        //     }
         }
     }
 

@@ -127,68 +127,6 @@ body {
       background: #1a1a1a;
       border-radius: 0 0 2px 2px; }
 
-.task {
-  margin: 1px 0 3px 0;
-  padding: 10px 20px;
-  background: #141414;
-  border: solid 1px #1a1a1a;
-  border-radius: 2px 2px 2px 2px;
-  color: #b4b4b4;
-  position: relative; }
-  .task .task-color {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 5px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-    background: rgba(172, 255, 47, 0.7); }
-  .task .task-root {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .task .task-root .task-title {
-      font-size: .9rem; }
-    .task .task-root .task-statistics {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      font-size: .75rem; }
-      .task .task-root .task-statistics .iterations, .task .task-root .task-statistics .total-time {
-        margin: 5px 20px 0 0;
-        color: #828282; }
-      .task .task-root .task-statistics .iterations-value, .task .task-root .task-statistics .total-time-value {
-        margin-left: 5px;
-        color: #b4b4b4; }
-  .task .task-actions {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 120px;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    border-left: solid 1px #1a1a1a;
-    background: #202020;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-
 .task_section .task_section_wrapper {
   position: relative;
   border: transparent 1px solid; }
@@ -213,6 +151,8 @@ body {
     left: 20px;
     right: 20px;
     z-index: 1;
+    -webkit-box-shadow: 0px -5px 11px 2px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px -5px 11px 2px rgba(0, 0, 0, 0.75);
     -webkit-transition: color 1s, background 1s, border 1s;
     -o-transition: color 1s, background 1s, border 1s;
     transition: color 1s, background 1s, border 1s; }
@@ -235,7 +175,9 @@ body {
     border-radius: 2px 2px 2px 2px;
     margin-top: 12px;
     font-size: 0.8rem;
-    padding: 30px 20px 20px 20px; }
+    padding: 15px 0px 2px 0px;
+    -webkit-box-shadow: 0px -5px 11px 2px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px -5px 11px 2px rgba(0, 0, 0, 0.75); }
   .task_section .task_section_wrapper .task_section_footer {
     position: relative;
     bottom: 2px;
@@ -244,26 +186,42 @@ body {
     background: #1a1a1a;
     border-radius: 0 0 2px 2px; }
 
-.task_section.iau .task_section_wrapper .task_section_title {
-  background: #7d1400;
-  border: 1px solid #871400; }
-  .task_section.iau .task_section_wrapper .task_section_title:hover {
-    background: #af1900;
-    border: 1px solid #b91901; }
+.task_section.iau .task_section_wrapper {
+  margin-bottom: -15px; }
+  .task_section.iau .task_section_wrapper .task_section_title {
+    background: #7d1400;
+    border: 1px solid #871400; }
+    .task_section.iau .task_section_wrapper .task_section_title:hover {
+      background: #af1900;
+      border: 1px solid #b91901; }
+  .task_section.iau .task_section_wrapper .task_section_content {
+    border-bottom: none;
+    border-radius: 2px 2px 0px 0px; }
 
-.task_section.ianu .task_section_wrapper .task_section_title {
-  background: #a07a00;
-  border: 1px solid #967a00; }
-  .task_section.ianu .task_section_wrapper .task_section_title:hover {
-    background: #c89a00;
-    border: 1px solid #be9a00; }
+.task_section.ianu .task_section_wrapper {
+  margin-bottom: -15px; }
+  .task_section.ianu .task_section_wrapper .task_section_title {
+    background: #a07a00;
+    border: 1px solid #967a00;
+    -webkit-box-shadow: 0px -5px 11px 2px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px -5px 11px 2px rgba(0, 0, 0, 0.75); }
+    .task_section.ianu .task_section_wrapper .task_section_title:hover {
+      background: #c89a00;
+      border: 1px solid #be9a00; }
+  .task_section.ianu .task_section_wrapper .task_section_content {
+    border-bottom: none;
+    border-radius: 2px 2px 0px 0px;
+    -webkit-box-shadow: 0px -5px 11px 2px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px -5px 11px 2px rgba(0, 0, 0, 0.75); }
 
-.task_section.uani .task_section_wrapper .task_section_title {
-  background: #237d00;
-  border: 1px solid #268600; }
-  .task_section.uani .task_section_wrapper .task_section_title:hover {
-    background: #2e9b00;
-    border: 1px solid #31a300; }
+.task_section.uani .task_section_wrapper {
+  margin-bottom: -15px; }
+  .task_section.uani .task_section_wrapper .task_section_title {
+    background: #237d00;
+    border: 1px solid #268600; }
+    .task_section.uani .task_section_wrapper .task_section_title:hover {
+      background: #2e9b00;
+      border: 1px solid #31a300; }
 
 .task_section.nuani .task_section_wrapper .task_section_title {
   background: #005a7d;
@@ -271,5 +229,43 @@ body {
   .task_section.nuani .task_section_wrapper .task_section_title:hover {
     background: #0072a0;
     border: 1px solid #0079a8; }
+
+.task {
+  margin: 0 0 -1px 0;
+  padding: 5px 20px;
+  background: #141414;
+  border-top: solid 1px #1a1a1a;
+  border-bottom: solid 1px #1a1a1a;
+  border-radius: none;
+  color: #b4b4b4;
+  position: relative; }
+  .task .task_root {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .task .task_root .task_title {
+      font-size: 0.8rem; }
+    .task .task_root .task_descriptions {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      font-size: 0.7rem;
+      color: #797979;
+      margin-top: .3rem; }
+      .task .task_root .task_descriptions .task_date .ring {
+        font-size: 0.75rem;
+        padding: 0px;
+        margin: -2px 3px 0px 0px; }
+      .task .task_root .task_descriptions .task_date .separator {
+        margin: 1px 10px 2px 10px;
+        color: #464646; }
 
 /*# sourceMappingURL=styles.css.map */
