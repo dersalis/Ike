@@ -9,7 +9,6 @@ $text-color-primary: rgb(180, 180, 180);
 $text-color-secondary: rgb(230, 230, 230);
 $page-title-color: rgb(200, 200, 200);
 
-
 body {
   background: black;
   font-family: Roboto, sans-serif;
@@ -20,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  height: 100vh;
+  //   height: 100vh;
   padding: $general_padding;
 
   .header {
@@ -31,18 +30,16 @@ body {
     margin-bottom: 10px;
 
     .page_title {
-      
       color: $title_color_disabled;
       font-weight: normal;
       font-size: 1.5rem;
       margin: 0 0 0 20px;
     }
-
   }
 
   .content {
-    // background: black;
-    // width: calc(100% - 3rem);
-    // padding: $content-padding;
+    min-height: calc(100vh - 92px);
+    display: flex;
+    flex-direction: column;
   }
 }
