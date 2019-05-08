@@ -54,6 +54,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
+  .menu input {
+    display: none; }
+  .menu #radio_item_01:checked + #menu_item_01::before,
+  .menu #radio_item_02:checked + #menu_item_02::before,
+  .menu #radio_item_03:checked + #menu_item_03::before,
+  .menu #radio_item_04:checked + #menu_item_04::before {
+    height: 3px;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s, height 0.15s 0.1s;
+    -o-transition: opacity 0.5s, height 0.15s 0.1s;
+    transition: opacity 0.5s, height 0.15s 0.1s; }
   .menu .menu_item {
     position: relative;
     display: -webkit-box;
@@ -85,12 +96,6 @@ body {
       opacity: 0; }
     .menu .menu_item:hover, .menu .menu_item:focus {
       color: white; }
-      .menu .menu_item:hover::before, .menu .menu_item:focus::before {
-        height: 3px;
-        opacity: 1;
-        -webkit-transition: opacity .5s, height .15s .1s;
-        -o-transition: opacity .5s, height .15s .1s;
-        transition: opacity .5s, height .15s .1s; }
 
 .section-one {
   margin-top: 5px;

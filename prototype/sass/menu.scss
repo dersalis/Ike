@@ -1,12 +1,26 @@
 $icon_primary: white;
 $icon_secondary: rgb(180, 180, 180);
 
-
 $icon_background: rgb(144, 0, 0);
 
 .menu {
   display: flex;
   flex-direction: row;
+
+  input {
+    display: none;
+  }
+
+  #radio_item_01:checked +#menu_item_01,
+  #radio_item_02:checked +#menu_item_02,
+  #radio_item_03:checked +#menu_item_03,
+  #radio_item_04:checked +#menu_item_04 {
+    &::before {
+      height: 3px;
+      opacity: 1;
+      transition: opacity 0.5s, height 0.15s 0.1s;
+    }
+  }
 
   .menu_item {
     position: relative;
@@ -21,7 +35,7 @@ $icon_background: rgb(144, 0, 0);
     color: $title_color_disabled;
 
     & > span {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
 
     &::before {
@@ -32,20 +46,19 @@ $icon_background: rgb(144, 0, 0);
       position: absolute;
       bottom: 0;
       left: 0;
-        opacity: 0;
-    //   z-index: 0;
+      opacity: 0;
+      //   z-index: 0;
     }
 
     &:hover,
     &:focus {
       color: $title_color_selected;
-      
 
-      &::before {
-          height: 3px;
-          opacity: 1;
-          transition: opacity .5s, height .15s .1s;
-      }
+      // &::before {
+      //   height: 3px;
+      //   opacity: 1;
+      //   transition: opacity 0.5s, height 0.15s 0.1s;
+      // }
       // transition: color 1s;
     }
 
