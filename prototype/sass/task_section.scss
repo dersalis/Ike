@@ -16,8 +16,6 @@ $shadow_section_title_out: 0px -5px 11px 1px rgba(0, 0, 0, 0.75);
 $shadow_section_title_in: inset 0px 10px 20px -10px rgba(255, 255, 255, 0.3);
 
 .task_section {
-  //   flex: 1;
-  // height: calc((100vh - 208px)/4);
 
   .task_section_wrapper {
     position: relative;
@@ -27,7 +25,7 @@ $shadow_section_title_in: inset 0px 10px 20px -10px rgba(255, 255, 255, 0.3);
       background: $non_background_color_active;
       font-size: 0.8rem;
       // text-transform: uppercase;
-      color: $title_color_active;
+      color: $title_color_disabled;
       height: $title-height;
       // width: $title-width;
       border: 1px solid $non_border_color_active;
@@ -74,16 +72,17 @@ $shadow_section_title_in: inset 0px 10px 20px -10px rgba(255, 255, 255, 0.3);
       border-radius: 2px 2px 2px 2px;
       margin-top: 12px;
 
-      // color: $text-color-primary;
       font-size: 0.8rem;
-    //   padding: 15px 0px 0px 0px;
 
       box-shadow: $shadow_section_content;
 
-      > div {
+      .tasks_list {
         padding: 12px 0px 17px 0px;
         overflow-y: scroll;
-        height: calc((100vh - 214px) / 4);
+        height: 2px;
+        opacity: 0;
+
+        transition: height 0.5s, opacity 0.3s 0.1s;
       }
     }
 
@@ -112,9 +111,31 @@ $shadow_section_title_in: inset 0px 10px 20px -10px rgba(255, 255, 255, 0.3);
     .task_section_wrapper {
       margin-bottom: -15px;
 
+      input {
+        display: none;
+        &:checked {
+          + .task_section_title {
+            background: $iau_background_color_active;
+            border: 1px solid $iau_border_color_active;
+            color: $title_color_active;
+
+            &:hover {
+              background: $iau_background_color_selected;
+              border: 1px solid $iau_border_color_selected;
+            }
+          }
+          ~ .task_section_content {
+            > div {
+              height: calc(100vh - 230px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+
       .task_section_title {
-        background: $iau_background_color_active;
-        border: 1px solid $iau_border_color_active;
+        background: $iau_background_color_disabled;
+        border: 1px solid $iau_border_color_disabled;
 
         &:hover {
           background: $iau_background_color_selected;
@@ -142,9 +163,31 @@ $shadow_section_title_in: inset 0px 10px 20px -10px rgba(255, 255, 255, 0.3);
     .task_section_wrapper {
       margin-bottom: -15px;
 
+      input {
+        display: none;
+        &:checked {
+          + .task_section_title {
+            background: $ianu_background_color_active;
+            border: 1px solid $ianu_border_color_active;
+            color: $title_color_active;
+
+            &:hover {
+              background: $ianu_background_color_selected;
+              border: 1px solid $ianu_border_color_selected;
+            }
+          }
+          ~ .task_section_content {
+            > div {
+              height: calc(100vh - 230px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+
       .task_section_title {
-        background: $ianu_background_color_active;
-        border: 1px solid $ianu_border_color_active;
+        background: $ianu_background_color_disabled;
+        border: 1px solid $ianu_border_color_disabled;
         // box-shadow: $shadow_section_content;
 
         &:hover {
@@ -174,9 +217,31 @@ $shadow_section_title_in: inset 0px 10px 20px -10px rgba(255, 255, 255, 0.3);
     .task_section_wrapper {
       margin-bottom: -15px;
 
+      input {
+        display: none;
+        &:checked {
+          + .task_section_title {
+            background: $uani_background_color_active;
+            border: 1px solid $uani_border_color_active;
+            color: $title_color_active;
+
+            &:hover {
+              background: $uani_background_color_selected;
+              border: 1px solid $uani_border_color_selected;
+            }
+          }
+          ~ .task_section_content {
+            > div {
+              height: calc(100vh - 230px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+
       .task_section_title {
-        background: $uani_background_color_active;
-        border: 1px solid $uani_border_color_active;
+        background: $uani_background_color_disabled;
+        border: 1px solid $uani_border_color_disabled;
 
         &:hover {
           background: $uani_background_color_selected;
@@ -204,9 +269,31 @@ $shadow_section_title_in: inset 0px 10px 20px -10px rgba(255, 255, 255, 0.3);
     .task_section_wrapper {
       // margin-bottom: -15px;
 
+      input {
+        display: none;
+        &:checked {
+          + .task_section_title {
+            background: $nuani_background_color_active;
+            border: 1px solid $nuani_border_color_active;
+            color: $title_color_active;
+
+            &:hover {
+              background: $nuani_background_color_selected;
+              border: 1px solid $nuani_border_color_selected;
+            }
+          }
+          ~ .task_section_content {
+            > div {
+              height: calc(100vh - 230px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+
       .task_section_title {
-        background: $nuani_background_color_active;
-        border: 1px solid $nuani_border_color_active;
+        background: $nuani_background_color_disabled;
+        border: 1px solid $nuani_border_color_disabled;
 
         &:hover {
           background: $nuani_background_color_selected;
