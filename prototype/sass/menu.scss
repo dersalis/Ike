@@ -36,6 +36,8 @@ $icon_background: rgb(144, 0, 0);
 
     & > span {
       font-size: 1.5rem;
+
+      transition: font-size .5s;
     }
 
     &::before {
@@ -53,6 +55,10 @@ $icon_background: rgb(144, 0, 0);
     &:hover,
     &:focus {
       color: $title_color_selected;
+
+      & > span {
+        font-size: 1.75rem;
+      }
 
       // &::before {
       //   height: 3px;

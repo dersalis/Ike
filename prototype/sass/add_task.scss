@@ -1,0 +1,70 @@
+$general_button_backgroud: #b4b4b4c0;
+$general_button_border: #c7c7c7bb;
+$general_button_color: #141414be;
+
+$general_button_backgroud_selected: #b4b4b4;
+$general_button_border_selected: #c7c7c7;
+$general_button_color_selected: #141414;
+
+$general_button_transition: 0.4s;
+
+.add_task {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  background: $general_button_backgroud;
+  border: solid 1px $general_button_border;
+  border-radius: 50%;
+  bottom: 15px;
+  right: 15px;
+  z-index: 2;
+  box-shadow: 0px -4px 8px 1px rgba(0, 0, 0, 0.5);
+
+  transition: background $general_button_transition,
+    border $general_button_transition;
+
+  & > span {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: $general_button_color;
+
+    transition: font-size $general_button_transition linear,
+      color $general_button_transition;
+  }
+
+  &:hover {
+    background: $general_button_backgroud_selected;
+    border: solid 1px $general_button_border_selected;
+
+    & > span {
+      font-size: 2.5rem;
+      color: $general_button_color_selected;
+    }
+  }
+}
+
+#add_task_button {
+  display: none;
+
+  &:checked {
+    + .app {
+      filter: blur(4px);
+      pointer-events: none;
+    }
+
+    ~ .add_task {
+        background: $general_button_backgroud_selected;
+        border: solid 1px $general_button_border_selected;
+
+        & > span {
+            // font-size: 2.5rem;
+            color: $general_button_color_selected;
+        }
+      }
+  }
+
+}

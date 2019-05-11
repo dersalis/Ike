@@ -19,6 +19,10 @@ $task-color-secondary-selected: rgb(131, 131, 131);
   border-radius: none;
   color: $task-color-primary;
   position: relative;
+//   height: 0px;
+//   opacity: 0;
+
+//   transition: height 0.4s .2s, opacity .3s;
 
   .task_root {
     display: flex;

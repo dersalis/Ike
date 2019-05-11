@@ -18,9 +18,9 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-
-  //   height: 100vh;
   padding: $general_padding;
+
+  transition: filter .4s;
 
   .header {
     display: flex;
